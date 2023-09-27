@@ -127,9 +127,10 @@ bool sea_shanty_face_loop(movement_event_t event, movement_settings_t *settings,
             watch_display_string("mario  ", 0);
             watch_buzzer_play_sequence(signal_tune_aron, NULL);
             break;
-        // case EVENT_MODE_LONG_PRESS:
-        //     movement_move_to_next_face();
-        //     break;
+        case EVENT_MODE_BUTTON_UP:
+            // Do not exit face while we're chirping
+                movement_move_to_next_face();
+            break;
         case EVENT_TICK:
         //     // state->song_index++;
         //     // watch_display_string("tick", 0);
