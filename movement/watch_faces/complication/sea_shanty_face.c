@@ -129,14 +129,14 @@ bool sea_shanty_face_loop(movement_event_t event, movement_settings_t *settings,
             break;
         case EVENT_MODE_BUTTON_UP:
             // Do not exit face while we're chirping
-                movement_move_to_next_face();
+            movement_move_to_next_face();
             break;
-        case EVENT_TICK:
+        // case EVENT_TICK:
         //     // state->song_index++;
         //     // watch_display_string("tick", 0);
-            break;
+            // break;
         default:
-            movement_default_loop_handler(event, settings);
+            // movement_default_loop_handler(event, settings);
             break;
     }
 
